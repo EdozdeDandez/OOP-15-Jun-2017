@@ -1,6 +1,7 @@
 <?php
-interface iTest {
-    public function setData($firstName,$lastName);
+
+interface UserInterface {
+    public function setDate();
     public function getFirstName();
     public function getLastName();
     public function getDate();
