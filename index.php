@@ -58,17 +58,6 @@
                 echo $user::getFullName()."<br>";
                 echo $user::login();
             }
-//            $user = new User($firstname, $lastname);
-//
-//            echo $array['firstName'] . " " . $array['lastName']."<br>";
-//            $userDetails = new UserDetails($firstname, $lastname);
-//            $userDetails->setDate();
-//            $userDetails->record();
-//            echo $userDetails->getDate();
-////            var_dump($array);
-////            var_dump($userDetails->arr);
-//            echo $userDetails->getFullName()."<br>";
-//            echo $userDetails->present();
         }
         ?>
     </div>
