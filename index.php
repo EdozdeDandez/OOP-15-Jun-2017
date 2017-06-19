@@ -46,7 +46,7 @@
             elseif ($post=='Student'){
                 $user = new StudentDetails($firstname,$lastname);
                 $user->setDate();
-                $array = $user->record();
+                $array [] = $user->record();
                 echo $user->present()."<br>";
                 foreach ($array as $item){
                     echo "First Name: ".$item['firstName']."<br>Last Name: ". $item['lastName']."<br>Date added: ".$item['date'];
