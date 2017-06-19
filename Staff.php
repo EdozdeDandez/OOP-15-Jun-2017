@@ -1,12 +1,13 @@
 <?php
-include_once('autoload.php');
 
-class User implements UserInterface{
+class Staff implements UserInterface{
     use AddPerson;
 
     protected $firstName;
     protected $lastName;
+    protected $staffNumber;
     private $date;
+    private $count = 0;
     public $arr = array();
 
     public function __construct($fistname, $lastname)
@@ -14,7 +15,11 @@ class User implements UserInterface{
         $this->firstName = $fistname;
         $this->lastName = $lastname;
     }
-
+    public function setNumber()
+    {
+        $this->staffNumber = $this->count++;
+        $this->count = $this->count++;
+    }
     public function setDate()
     {
         $this->date = date("Y-m-d");
@@ -30,5 +35,9 @@ class User implements UserInterface{
     public function getDate()
     {
         return $this->date;
+    }
+    public function getNumber()
+    {
+        return $this->count;
     }
 }
